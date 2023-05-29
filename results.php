@@ -15,7 +15,7 @@
   $exponent = intval($_POST['exponent']);
   
   // Error case for if user enters a string or nothing
-  if (((!is_numeric($base)) || (!is_numeric($exponent))) || ($base < 0) || ($exponent < 0)) {
+  if (($exponent == 0) || ($base == 0) || ($base < 0) || ($exponent < 0)) {
     $numbers = "Please enter two positive integers as a base and an exponent.";
   } 
   
